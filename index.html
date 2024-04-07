@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Layout</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    /* Ajustar el tamaño de las imágenes */
+    .custom-img {
+      width: 100%;
+      height: auto;
+    }
+    /* Centrar el texto y la tabla */
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg text-bg-success p-3">
+  <div class="container-fluid">
+    <b><a class="navbar-brand text-light" href="#">Antbud</a></b>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenedor principal -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Formulario -->
+    <div class="col-md-6">
+      <h2>Financial information</h2>
+      <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input class="form-control" type="text" aria-label="readonly input example" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last name</label>
+            <input class="form-control" type="text" aria-label="readonly input example" readonly>
+          </div>
+          <label for="exampleInputEmail1" class="form-label">Salary</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+          <label for="exampleInputEmail1" class="form-label">How much do you spend?</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+          <label for="exampleInputEmail1" class="form-label">How much do you save?</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Do you authorize us to use this information?</label>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-dark">SAVE</button>
+          </div>
+        </form>
+    </div>
+    <!-- Imágenes en la otra mitad de la página -->
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="ants2.jpg" class="rounded float-start img-fluid">
+        </div>
+        <div class="col-md-6">
+          <img src="frustracion-financiera.jpg" class="rounded float-end img-fluid">
+        </div>
+      </div>
+      <!--Acordeón con más información del PIA-->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What is?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is a financial tracker system</strong> Some of the main functions of this system is to make the easiest way to keep track of your money, and not only
+                The way you spend also gives you ways you can save money and be more financially smart.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Who can use it?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This system was created for individuals who are interested in learning how to manage their finances.</strong>Throughout our lives we have been taught that being rich is the greatest goal of our life, study to not die of hunger and have money with a professional degree, but on many occasions it has been seen that people who have money lose it because they do not know how manage their money. In all honesty, who taught us finance and how to be financially savvy?
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Special characteristics
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Technology and finances</strong> Technology is definitely a tool that is here to stay, and what better way to monitor your finances and better way to manage your money than a system designed to know your income and expenses, in addition to helping to categorize the money you spend into different types.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Imagen-->
+  <div class="row mt-5">
+    <div class="col-md-6 centered">
+      <br>
+      <img src="ants.jpg" class="img-fluid" alt="...">
+    </div>
+    <!-- Tabla-->
+    <div class="col-md-6 centered">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Functions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Add your salary or the money that you receive per month</td>
+          </tr>
+          <tr>
+            <td>2. Add money that you know that you spend per month</td>
+          </tr>
+          <tr>
+            <td>3. Create categories</td>
+          </tr>
+          <tr>
+            <td>4. Clasify your money for categories</td>
+          </tr>
+          <tr>
+            <td>5. Create your own pig to save money</td>
+          </tr>
+          <tr>
+            <td>6. Provide options to save money</td>
+          </tr>
+          <tr>
+            <td>7. Show what your ant expenses are</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (opcional, solo si necesitas funcionalidades específicas de Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
